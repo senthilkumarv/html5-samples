@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="utf-8">
+	<title>MessagingParent</title>
+	<style type="text/css" media="screen">
+		#messages{
+			width:600px;
+			height: 400px;
+		}
+	</style>
+	<script type="text/javascript" charset="utf-8" src="../scripts/jquery-1.4.2.js"></script>
+	<script type="text/javascript" charset="utf-8">
+
+		onmessage = function(event) {
+			console.log('hi');
+			$('#messages').html($('#messages').html() + '<br />' + event.data);
+			parent.postMessage('Got Your Message', 'http://10.122.122.211');
+		};
+	</script>
+</head>
+<body>
+	<div id="messages"></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Event Sources Demo</title>
+		<script type="text/javascript" src="../scripts/jquery-1.4.2.js"></script>
+		<style type="text/css" media="screen">
+			#msgs {
+				float: right;
+				margin-right: 20px;
+			}
+			#pushmsgs {
+				overflow: hidden;
+			}
+			h1 {
+				width: 20%;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<heading>
+				<h1>Event Sources Demo</h1>
+			</heading>
+			<article id="msgs">
+				<heading>
+					<h2>Push Messages</h2>
+				</heading>
+				<ul id="pushmsgs">
+				</ul>
+			</article>
+			<article>
+				<heading>
+					<h2>Controls</h2>
+				</heading>
+				<input type="button" value="Receive Events" id="startPull" />
+				<input type="button" value="Stop Receiveing" id="stopPull" />
+			</article>
+		</section>
+		<script type="text/javascript" charset="utf-8">
+			var es;
+			
+			appendEvents = function(event) {
+				$('#pushmsgs').append('<li>' + event.data + '</li>');
+			};
+			
+			startPull = function() {
+				es = new EventSource('/cgi-bin/pyeventsrc.py');
+				es.onmessage = appendEvents;
+			};
+			
+			stopPull = function() {
+				if(es)
+					es.close();
+			};
+			
+			$('#startPull').click(startPull);
+			$('#stopPull').click(stopPull);
+		</script>
+	</body>
+</html>

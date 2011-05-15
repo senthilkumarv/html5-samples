@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Web Sockets</title>
+		<link rel="stylesheet" href="styles/websockets.css" type="text/css" media="screen" charset="utf-8">
+		<script type="text/javascript" src="../scripts/jquery-1.4.2.js"></script>
+		
+	</head>
+	<body>
+		<h1>Echo Server - Web Sockets</h1>
+		<div class="echoServer">
+			<div class="inputContainer">
+				<label for="message">Enter Your Message</label>
+				<input type="text" name="message" id="message" />
+			</div>
+			<div class="control">
+				<input type="button" id="sendMsg" value="Send Message" />
+				<input type="button" id="closeConn" value="Close Connectection" />
+				<input type="button" id="clearResponses" value="Clear Messages">
+			</div>
+			
+		</div>
+		<div class="responses" id="responses"></div>
+		<script type="text/javascript" charset="utf-8" src="scripts/websockets.js"></script>
+	</body>
+</html>

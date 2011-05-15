@@ -1,0 +1,37 @@
+.details {
+	width: 600px;
+	border: 1px solid black;
+	overflow: hidden;
+}
+.label {
+	width:200px;
+	overflow: hidden;
+	float: left;
+}
+.detail {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	overflow: hidden;
+}
+.emptySpace {
+	height: 50px;
+	overflow: hidden;
+	margin-top:5px;
+	margin-bottom: 5px;
+}
+#locationInput {
+	text-align: center;
+	border-bottom: 1px solid black;
+	vertical-align: middle;
+}
+#map {
+	width: 400px;
+	height: 320px;
+}
+.part1 {
+	float: left;
+}
+.part2 {
+	float: right;
+}

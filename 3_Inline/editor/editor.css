@@ -1,0 +1,201 @@
+body {
+    background-color: #424242;
+    margin: 0px;
+    border: 0px;
+}
+
+header {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.3, rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0.2)));
+    border: 0px;
+    margin: 0px;
+    padding: 18px 30px;
+}
+
+footer {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0.2)), color-stop(0.3, rgba(0, 0, 0, 0.07)), to(transparent));
+    border: 0px;
+    margin: 0px;
+    padding: 18px 30px;
+}            
+
+h1 {
+    text-shadow: rgba(255, 255, 255, 0.292969) 0px -1px 0px;
+    color: #701112;
+    font: normal normal normal 48px 'Lucida Grande', 'Lucida Sans Unicode', 'URW Gothic L', Arial, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+h3 {
+    text-shadow: rgba(255, 255, 255, 0.292969) 0px -1px 0px;
+    color: #701112;
+    font: normal normal normal 24px 'Lucida Grande', 'Lucida Sans Unicode', 'URW Gothic L', Arial, Verdana, sans-serif;
+    padding: 4px 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+h6 {
+    text-shadow: rgba(0, 0, 0, 0.292969) 0px -1px 0px;
+    color: #701112;
+    font: normal normal normal 14px 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+div {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+div.container {
+    width: 900px;
+    background-color: #C5BD99;
+    margin: auto;
+}
+
+div.border {
+    width: 100%;
+    border-top: 2px solid #701112;
+}
+
+div.editor {
+    padding: 0px 30px;
+}
+
+div.editor div {
+    margin: 0px;
+    height: 400px;
+    width: 100%;
+    border: none;
+    padding: 0px;
+    background-color: #C5BD99;
+    overflow-x: hidden;
+    overflow-y: auto;
+    resize: none;
+    color: #ffffff;
+    text-shadow: rgba(0, 0, 0, 0.292969) 0px -1px 0px;
+    outline: none;
+}
+
+div.controls {
+    height: 70px;
+    width: 95%;
+    margin: auto;
+}
+
+.controls section {
+    display: inline-block;
+}
+
+div.display {
+    padding: 0px 30px;
+}
+
+div p {
+    margin: 10px 0px;
+    height: 24px;
+    width: 100%;
+    border: none;
+    background-color: #C5BD99;
+    overflow: auto;
+    resize: none;
+    font-size: 18px;
+    color: #701112;
+    text-shadow: rgba(0, 0, 0, 0.292969) 0px -1px 0px;
+}
+
+section {
+    border: 0;
+    padding: 0 20px;
+    height: 100%;
+}
+
+ul, select {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    height: 12px
+}
+
+.color-swatch {
+    border: 0;
+    display: inline-block;
+    height: 16px;
+    margin-right: 4px;
+    overflow: hidden;
+    width: 16px;
+    background-color: white;
+}
+
+.color-swatch input {
+    border: 0;
+    margin: 1px 1px;
+    height: 14px;
+    width: 14px;
+}
+
+.color-swatch.white input {
+    background-color: white;
+}
+
+.color-swatch.black input {
+    background-color: black;
+}
+
+.color-swatch.red input {
+    background-color: red;
+}
+
+.color-swatch.orange input {
+    background-color: orange;
+}
+
+.color-swatch.yellow input {
+    background-color: yellow;
+}
+
+.color-swatch.green input {
+    background-color: green;
+}
+
+.color-swatch.blue input {
+    background-color: blue;
+}
+
+.others {
+    border: 1px solid white;
+    display: inline-block;
+    height: 18px;
+    margin-right: 4px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.others input {
+    border: 0;
+    margin: 1px 1px;
+    height: 14px;
+    width: 14px;
+    color: white;
+    background-color: black;
+}
+
+.others.bold input {
+    width: 60px;
+}
+
+.others.italic input {
+    width: 60px;
+}
+
+.others.underline input {
+    width: 75px;
+}

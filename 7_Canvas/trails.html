@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Explore California Trail Guide</title>
+<!--update based on html5-->
+<link href="_css/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function drawMap() {  
+    var elvPlot = document.getElementById('myMap').getContext('2d');  
+	var img = new Image();  
+	img.onload = function(){  
+	elvPlot.drawImage(img,0,0);  
+	elvPlot.lineWidth = 4;
+	elvPlot.lineJoin = "round";
+	elvPlot.strokeStyle = "#7f7f7f";
+	elvPlot.beginPath();  
+	elvPlot.moveTo(89,644);  
+	elvPlot.lineTo(106,627);  
+	elvPlot.lineTo(140,592);  
+	elvPlot.lineTo(175,567);  
+	elvPlot.lineTo(209,601);
+	elvPlot.lineTo(244,567);
+	elvPlot.lineTo(278,558);
+	elvPlot.lineTo(313,550); 
+	elvPlot.lineTo(347,558);   
+	elvPlot.lineTo(381,567);
+	elvPlot.lineTo(415,575); 
+	elvPlot.lineTo(450,567);
+	elvPlot.lineTo(484,558);
+	elvPlot.lineTo(518,550); 
+	elvPlot.lineTo(553,541);     
+	elvPlot.stroke(); 
+	//elvPlot.beginPath();
+	//elvPlot.lineJoin = "miter";
+	//elvPlot.lineWidth = 4;
+	/* elvPlot.strokeStyle = "#333";
+	elvPlot.moveTo(89, 434);
+	elvPlot.lineTo(89, 645);
+	elvPlot.lineTo(567, 645);
+	elvPlot.stroke(); */
+	}  
+	img.src = '_images/northridge_map.jpg';  
+} 
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body onload="drawMap();">
+
+    <canvas id="myMap" width="600" height="695">
+Your browser does not support canvas. Please upgrade to the latest version of Chrome, Firefox, or Safari.
+</canvas>
+  
+</body>
+</html

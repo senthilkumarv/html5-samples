@@ -1,0 +1,28 @@
+.responses {
+	height:620px;
+	width: 480px;
+	overflow: hidden;
+}
+h1{
+	width: 400px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.echoServer {
+	width: 30%;
+	margin-left:auto;
+	margin-right: auto;
+	border: 1px solid black;
+}
+
+.echoServer * {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.echoServer .control input {
+	width: 130px;
+}

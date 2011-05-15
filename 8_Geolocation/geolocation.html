@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>GeoLocation</title>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" charset="utf-8" src="../scripts/jquery-1.4.2.js"></script>
+		<link rel="stylesheet" href="styles/geolocation.css" type="text/css" media="screen" charset="utf-8">
+	</head>
+	<body>
+		<div class="part1">
+			<span>Your current location details</span>
+			<div class="details">
+				<div class="detail"><span class="label">Latitude: </span><span id="longitude"></span></div>
+				<div class="detail"><span class="label">Longitude: </span><span id="latitude"></span></div>
+				<div class="detail"><span class="label">Location: </span><span id="location"></span></div>
+			</div>
+			<div class="emptySpace"></div>
+			<div class="details">
+				<div id="locationInput">
+				<label for="locationName">Location Name</label>
+				<input type="text" name="locationName" id="locationName" />
+				<input type="button" id="getLatLong" value="Find Co-ordinates" />
+				</div>
+				<div class="detail">
+					<span class="label">Latitude</span>
+					<span id="lat"></span>
+				</div>
+				<div class="detail">
+					<span class="label">Longitude</span>
+					<span id="long"></span>
+				</div>
+			</div>
+		</div>
+		<div class="part2">
+			<div id="map"></div>
+		</div>
+		<script type="text/javascript" charset="utf-8" src="scripts/geolocation.js"></script>
+	</body>
+</html>

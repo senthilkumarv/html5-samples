@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Day2</title>
+		<link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" charset="utf-8">
+		<script type="text/javascript" charset="utf-8" src="../scripts/jquery-1.4.2.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/script1.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<h1 class="mainTitle">Forms Demo</h1>
+		</header>
+		<section>
+			<div id="status"></div>
+			<header>
+				<h1 class="formTitle">Fill in your personal details</h1>
+			</header>
+			<form id="personalDetails" method="GET" class="personalDetailsForm">
+				<input type="text" name="key" id="key" />
+				<div>
+					<label for="firstName">First Name</label>
+					<input type="text" name="firstName" id="firstName" tabindex="10" placeholder="Enter First Name" required />
+				</div>
+				<div>
+					<label for="lastName">Last Name</label>
+					<input type="text" name="lastName" id="lastName" tabindex="20" autofocus placeholder="Enter Last Name" required />
+				</div>
+				<div>
+					<label for="emailId">Email ID</label>
+					<input type="email" name="emailId" id="emailId" tabindex="30" required />
+				</div>
+				<div>
+					<label for="dateOfBirth">Date of Birth</label>
+					<input type="date" name="dateOfBirth" id="dateOfBirth" tabindex="40" required />
+				</div>
+				<div>
+					<label for="gender">Gender</label>
+					<select name="gender" id="gender">
+						<option value="m" selected>Male</option>
+						<option value="f">Female</option>
+					</select>
+				</div>
+				<div>
+					<label for="homePage">Home Page URL</label>
+					<input type="url" name="homePage" id="homePage" />
+				</div>
+				<div id="controls">
+					<input type="button" name="submitForm" id="submitForm" value="Add Details" />
+					<input type="button" name="clearDatabase" id="clearDatabase" value="Clear All Data" />
+				</div>
+			</form>
+			<table id="personalTable">
+				<thead>
+					<tr id="tableHeading">
+						<th>ID</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email ID</th>
+						<th>Date of Birth</th>
+						<th>Gender</th>
+						<th>Home Page</th>
+					</tr>
+				</thead>
+				<tbody id="personal">
+				</tbody>
+			</table>
+			
+		</section>
+		<script type="text/javascript" charset="utf-8" src="scripts/init.js"></script>
+		
+	</body>
+</html>

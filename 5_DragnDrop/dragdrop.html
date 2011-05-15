@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Drag n Drop</title>
+		<script type="text/javascript" src="/jquery-1.4.2.js"></script>
+		<style type="text/css">
+			.preview {
+				width: 120px;
+				height: 90px;
+				margin: 20px 10px 20px 30px;
+			}			
+			#actualImage {
+				width: 640px;
+				height: 480px;				
+				float: left;
+			}
+			#thumbTitle {
+				font-weight: bold;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mainWindow">
+			<div id="thumbnails" name="tn"></div><img id="actualImage" class="img" name="actualImage">
+		</div>
+		<script type="text/javascript" charset="utf-8">
+		var currElement = null;
+		$(document).ready(function(){
+			for(var i=1;i<=6;i++){
+				var fileName = 'images/' + i + '.JPG';
+				var tag = '<img id="img' + i + '" src="' + fileName + '" class="preview" draggable />';
+				$('#thumbnails').html($('#thumbnails').html() + tag);
+			}
+			var thumbs = document.getElementsByClassName('preview');
+			for(var j=0;j<thumbs.length;j++){
+				thumbs[j].addEventListener('dragstart', function(e){
+				/*	if(currElement) currElement.className = 'preview';
+					currElement = this;
+*/
+					e.dataTransfer.setData('Source', this.src);
+				//	e.dataTransfer.effectAllowed = e.target.className;
+
+				}, true);
+			}
+			var pane = document.getElementById('actualImage');
+			pane.addEventListener('dragover', function(e){
+				if (e.preventDefault){ e.preventDefault(); } 
+				e.dataTransfer.dropEffect = 'img';
+			}, true);
+			pane.addEventListener('drop', function(e){
+				if (e.preventDefault) e.preventDefault();
+				var src =  e.dataTransfer.getData('text/uri-list');
+				if(src == undefined){
+				//	src = e.dataTransfer.getData('Source');
+				}
+				this.src = src;
+			}, true);
+		});
+			
+		</script>
+	</body>
+</html>
