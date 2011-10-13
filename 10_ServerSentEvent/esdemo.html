@@ -46,7 +46,7 @@
 			};
 			
 			startPull = function() {
-				es = new EventSource('/cgi-bin/pyeventsrc.py');
+				es = new EventSource('/cgi-bin/pyeventsrc.py'); /* The server must be from the same origin */
 				es.onmessage = appendEvents;
 			};
 			
